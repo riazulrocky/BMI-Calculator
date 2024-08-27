@@ -4,6 +4,10 @@ class home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("BMI Calculator", style: TextStyle(color: Color(0xffaf94ff)),),
+      ),
+    );
   }
 }
