@@ -6,7 +6,11 @@ class home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("BMI Calculator", style: TextStyle(color: Color(0xffaf94ff)),),
+        title: Text(
+          "BMI Calculator",
+          style:
+              TextStyle(color: Color(0xffaf94ff), fontWeight: FontWeight.bold),
+        ),
       ),
     );
   }
