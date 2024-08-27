@@ -9,8 +9,38 @@ class home extends StatelessWidget {
         title: Text(
           "BMI Calculator",
           style:
-              TextStyle(color: Color(0xffaf94ff), fontWeight: FontWeight.bold),
+              TextStyle(color: Color(0xffdafd87), fontWeight: FontWeight.bold),
         ),
+      ),
+      body: Column(
+        children: [
+          Expanded(
+              child: Row(
+            children: [
+              Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    margin: EdgeInsets.all(15),
+                color: Color(0xff4e4076),
+              )),
+              Expanded(
+                  child: Container(
+                    margin: EdgeInsets.all(15),
+                color: Color(0xff2b2b2b),
+              )),
+            ],
+          )),
+          Expanded(child: Container()),
+          Expanded(
+              child: Row(
+            children: [
+              Expanded(child: Container()),
+              Expanded(child: Container()),
+            ],
+          )),
+        ],
       ),
     );
   }
