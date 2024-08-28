@@ -9,7 +9,7 @@ class home extends StatelessWidget {
         title: Text(
           "BMI Calculator",
           style:
-              TextStyle(color: Color(0xffdafd87), fontWeight: FontWeight.bold),
+              TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
       ),
       body: Column(
@@ -20,26 +20,58 @@ class home extends StatelessWidget {
               Expanded(
                   child: Container(
                     decoration: BoxDecoration(
+                      color: Color(0xff2e293d),
                       borderRadius: BorderRadius.circular(25),
                     ),
-                    margin: EdgeInsets.all(15),
-                color: Color(0xff4e4076),
+                    margin: EdgeInsets.all(10),
+
               )),
               Expanded(
                   child: Container(
-                    margin: EdgeInsets.all(15),
-                color: Color(0xff2b2b2b),
-              )),
+                    decoration: BoxDecoration(
+                      color: Color(0xff2e293d),
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    margin: EdgeInsets.all(10),
+
+                  ),
+              ),
             ],
-          )),
-          Expanded(child: Container()),
+          ),
+          ),
+          Expanded(child: Container(
+            decoration: BoxDecoration(
+              color: Color(0xff2e293d),
+              borderRadius: BorderRadius.circular(25),
+            ),
+            margin: EdgeInsets.all(10),
+
+          ),
+          ),
           Expanded(
               child: Row(
             children: [
-              Expanded(child: Container()),
-              Expanded(child: Container()),
+              Expanded(child: Container(
+                decoration: BoxDecoration(
+                  color: Color(0xff2e293d),
+                  borderRadius: BorderRadius.circular(25),
+                ),
+                margin: EdgeInsets.all(10),
+
+              ),
+              ),
+              Expanded(child: Container(
+                decoration: BoxDecoration(
+                  color: Color(0xff2e293d),
+                  borderRadius: BorderRadius.circular(25),
+                ),
+                margin: EdgeInsets.all(10),
+
+              ),
+              ),
             ],
-          )),
+          ),
+          ),
         ],
       ),
     );
