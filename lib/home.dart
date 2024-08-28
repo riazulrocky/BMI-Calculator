@@ -9,7 +9,7 @@ class home extends StatelessWidget {
         title: Text(
           "BMI Calculator",
           style:
-              TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              TextStyle(color: Color(0xff8482ff), fontWeight: FontWeight.bold),
         ),
       ),
       body: Column(
@@ -71,6 +71,19 @@ class home extends StatelessWidget {
               ),
             ],
           ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 20),
+            child: MaterialButton(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(25),
+              ),
+              onPressed: () {},
+              child: Text("Calculate"),
+              color: Color(0xff8482ff),
+              minWidth: 370,
+              height: 60,
+            ),
           ),
         ],
       ),
