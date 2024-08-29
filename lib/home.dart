@@ -8,8 +8,10 @@ class home extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           "BMI Calculator",
-          style:
-              TextStyle(color: Color(0xff8482ff), fontWeight: FontWeight.bold),
+          style: TextStyle(
+              color: Color(0xff8482ff),
+              fontSize: 24,
+              fontWeight: FontWeight.bold),
         ),
       ),
       body: Column(
@@ -20,32 +22,72 @@ class home extends StatelessWidget {
               Expanded(
                   child: Container(
                     decoration: BoxDecoration(
-                      color: Color(0xff2e293d),
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                    margin: EdgeInsets.all(10),
-
-              )),
-              Expanded(
+                    color: Color(0xff3e3552),
+                    borderRadius: BorderRadius.circular(25),
+                  ),
+                  margin: EdgeInsets.all(10),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.male,
+                        color: Color(0xff8482ff),
+                        size: 50,
+                      ),
+                      Text(
+                        "Male",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                )),
+                Expanded(
                   child: Container(
                     decoration: BoxDecoration(
                       color: Color(0xff2e293d),
                       borderRadius: BorderRadius.circular(25),
                     ),
                     margin: EdgeInsets.all(10),
-
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.female,
+                          color: Color(0xff8482ff),
+                          size: 50,
+                        ),
+                        Text(
+                          "Female",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
                   ),
               ),
             ],
           ),
           ),
           Expanded(child: Container(
+            width: double.infinity,
             decoration: BoxDecoration(
               color: Color(0xff2e293d),
               borderRadius: BorderRadius.circular(25),
             ),
             margin: EdgeInsets.all(10),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Height", style: TextStyle(color: Colors.white),),
+                Text("160", style: TextStyle(color: Colors.white, fontSize: 80),),
 
+              ],
+            ),
           ),
           ),
           Expanded(
@@ -57,29 +99,144 @@ class home extends StatelessWidget {
                   borderRadius: BorderRadius.circular(25),
                 ),
                 margin: EdgeInsets.all(10),
-
-              ),
-              ),
-              Expanded(child: Container(
-                decoration: BoxDecoration(
-                  color: Color(0xff2e293d),
-                  borderRadius: BorderRadius.circular(25),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text(
+                          "Weight",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 21,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            MaterialButton(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              minWidth: 8,
+                              height: 50,
+                              color: Color(0xff8482ff),
+                              onPressed: () {},
+                              child: Icon(
+                                Icons.remove,
+                                color: Colors.black,
+                                size: 20,
+                              ),
+                            ),
+                            Text(
+                              "60",
+                              style: TextStyle(
+                                  fontSize: 50,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.normal),
+                            ),
+                            MaterialButton(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10)),
+                              minWidth: 8,
+                              height: 50,
+                              color: Color(0xff8482ff),
+                              onPressed: () {},
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.black,
+                                size: 20,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Text(
+                          "Kg",
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Color(0xff2e293d),
+                      borderRadius: BorderRadius.circular(25),
+                    ),
                 margin: EdgeInsets.all(10),
-
-              ),
-              ),
-            ],
-          ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text(
+                          "Age",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 21,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            MaterialButton(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              minWidth: 8,
+                              height: 50,
+                              color: Color(0xff8482ff),
+                              onPressed: () {},
+                              child: Icon(
+                                Icons.remove,
+                                color: Colors.black,
+                                size: 20,
+                              ),
+                            ),
+                            Text(
+                              "27",
+                              style: TextStyle(
+                                  fontSize: 50,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.normal),
+                            ),
+                            MaterialButton(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10)),
+                              minWidth: 8,
+                              height: 50,
+                              color: Color(0xff8482ff),
+                              onPressed: () {},
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.black,
+                                size: 20,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Text(
+                          "Year",
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
           Padding(
             padding: const EdgeInsets.only(bottom: 20),
             child: MaterialButton(
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(25),
+                borderRadius: BorderRadius.circular(15),
               ),
               onPressed: () {},
-              child: Text("Calculate"),
+              child: Text(
+                "Calculate",
+                style: TextStyle(
+                    fontSize: 21,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
+              ),
               color: Color(0xff8482ff),
               minWidth: 370,
               height: 60,
