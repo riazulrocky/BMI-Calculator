@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
-class home extends StatelessWidget {
+
+class home extends StatefulWidget {
   const home({super.key});
+
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<home> {
+  double val = 160;
 
   @override
   Widget build(BuildContext context) {
@@ -17,33 +25,34 @@ class home extends StatelessWidget {
       body: Column(
         children: [
           Expanded(
-              child: Row(
-            children: [
-              Expanded(
+            child: Row(
+              children: [
+                Expanded(
                   child: Container(
                     decoration: BoxDecoration(
-                    color: Color(0xff3e3552),
-                    borderRadius: BorderRadius.circular(25),
+                      color: Color(0xff3e3552),
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    margin: EdgeInsets.all(10),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.male,
+                          color: Color(0xff8482ff),
+                          size: 50,
+                        ),
+                        Text(
+                          "Male",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
                   ),
-                  margin: EdgeInsets.all(10),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.male,
-                        color: Color(0xff8482ff),
-                        size: 50,
-                      ),
-                      Text(
-                        "Male",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
-                )),
+                ),
                 Expanded(
                   child: Container(
                     decoration: BoxDecoration(
@@ -69,36 +78,51 @@ class home extends StatelessWidget {
                       ],
                     ),
                   ),
-              ),
-            ],
-          ),
-          ),
-          Expanded(child: Container(
-            width: double.infinity,
-            decoration: BoxDecoration(
-              color: Color(0xff2e293d),
-              borderRadius: BorderRadius.circular(25),
-            ),
-            margin: EdgeInsets.all(10),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("Height", style: TextStyle(color: Colors.white),),
-                Text("160", style: TextStyle(color: Colors.white, fontSize: 80),),
-
+                ),
               ],
             ),
           ),
+          Expanded(
+            child: Container(
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: Color(0xff2e293d),
+                borderRadius: BorderRadius.circular(25),
+              ),
+              margin: EdgeInsets.all(10),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Height",
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                  Text(
+                    "170",
+                    style: TextStyle(color: Colors.white, fontSize: 70),
+                  ),
+                  Slider(
+                    max: 200,
+                    activeColor: Color(0xff8482ff),
+                    inactiveColor: Colors.black,
+                    value: val,
+
+                    onChanged: (double val){},
+                  )
+                ],
+              ),
+            ),
           ),
           Expanded(
-              child: Row(
-            children: [
-              Expanded(child: Container(
-                decoration: BoxDecoration(
-                  color: Color(0xff2e293d),
-                  borderRadius: BorderRadius.circular(25),
-                ),
-                margin: EdgeInsets.all(10),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Color(0xff2e293d),
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    margin: EdgeInsets.all(10),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -162,7 +186,7 @@ class home extends StatelessWidget {
                       color: Color(0xff2e293d),
                       borderRadius: BorderRadius.circular(25),
                     ),
-                margin: EdgeInsets.all(10),
+                    margin: EdgeInsets.all(10),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
