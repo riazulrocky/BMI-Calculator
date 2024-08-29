@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 class home extends StatefulWidget {
   const home({super.key});
 
@@ -8,7 +7,7 @@ class home extends StatefulWidget {
 }
 
 class _HomeState extends State<home> {
-  double val = 160;
+  double val = 175;
 
   @override
   Widget build(BuildContext context) {
@@ -94,11 +93,11 @@ class _HomeState extends State<home> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Height",
+                    "Height (cm)",
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                   Text(
-                    "170",
+                    "175",
                     style: TextStyle(color: Colors.white, fontSize: 70),
                   ),
                   Slider(
@@ -151,7 +150,7 @@ class _HomeState extends State<home> {
                               ),
                             ),
                             Text(
-                              "60",
+                              "66",
                               style: TextStyle(
                                   fontSize: 50,
                                   color: Colors.white,
@@ -215,7 +214,7 @@ class _HomeState extends State<home> {
                               ),
                             ),
                             Text(
-                              "27",
+                              "22",
                               style: TextStyle(
                                   fontSize: 50,
                                   color: Colors.white,
