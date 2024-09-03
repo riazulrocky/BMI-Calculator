@@ -33,9 +33,10 @@ class resultpage extends StatelessWidget {
             height: 200,
             width: 400,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(25),
               color: Color(0xff2e293d),
             ),
+            margin: EdgeInsets.all(15),
             child: Column(
               children: [
                 SizedBox(height: 20),
@@ -63,11 +64,26 @@ class resultpage extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 30),
-          Text(
-            "$info",
-            style: TextStyle(
-                fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white),
+          SizedBox(height: 10),
+          Container(
+            alignment: Alignment.centerLeft,
+            margin: EdgeInsets.only(left: 20),
+            child: Text(
+              "$resultText",
+              style: TextStyle(
+                  fontSize: 25, fontWeight: FontWeight.bold, color: Color(0xff8482ff),),
+            ),
+          ),
+          SizedBox(height: 5),
+
+          Container(
+            alignment: Alignment.centerLeft,
+            margin: EdgeInsets.only(left: 20, right: 20),
+            child: Text(
+              "$info",
+              style: TextStyle(
+                  fontSize: 18, fontWeight: FontWeight.normal, color: Colors.white),
+            ),
           ),
           Spacer(),
 
