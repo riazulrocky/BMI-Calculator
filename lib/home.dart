@@ -189,7 +189,7 @@ class _HomeState extends State<home> {
                             Text(
                               "$weight",
                               style: TextStyle(
-                                  fontSize: 50,
+                                  fontSize: 41,
                                   color: Colors.white,
                                   fontWeight: FontWeight.normal),
                             ),
@@ -265,7 +265,7 @@ class _HomeState extends State<home> {
                             Text(
                               "$age",
                               style: TextStyle(
-                                  fontSize: 50,
+                                  fontSize: 41,
                                   color: Colors.white,
                                   fontWeight: FontWeight.normal),
                             ),
