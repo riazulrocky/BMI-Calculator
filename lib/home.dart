@@ -11,7 +11,7 @@ class home extends StatefulWidget {
 class _HomeState extends State<home> {
 
   bool ismale = true;
-  int weight = 50;
+  int weight = 60;
   int age = 25;
   double height = 175;
 
@@ -121,7 +121,7 @@ class _HomeState extends State<home> {
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                   Text(
-                    "$height",
+                    "${height.toInt()}",
                     style: TextStyle(color: Colors.white, fontSize: 70),
                   ),
                   Slider(
