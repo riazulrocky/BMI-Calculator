@@ -7,7 +7,11 @@ class home extends StatefulWidget {
 }
 
 class _HomeState extends State<home> {
-  double val = 175;
+
+  bool ismale = true;
+  int weight = 66;
+  int age = 21;
+  double height = 175;
 
   @override
   Widget build(BuildContext context) {
@@ -27,54 +31,72 @@ class _HomeState extends State<home> {
             child: Row(
               children: [
                 Expanded(
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xff3e3552),
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                    margin: EdgeInsets.all(10),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.male,
-                          color: Color(0xff8482ff),
-                          size: 50,
-                        ),
-                        Text(
-                          "Male",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ],
+                  child: InkWell(
+                    onTap: (){
+
+                      setState(() {
+                        ismale = true;
+                      });
+
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: ismale == true? Color(0xff534672) : Color(0xff2e293d),
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                      margin: EdgeInsets.all(10),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.male,
+                            color: Color(0xff8482ff),
+                            size: 50,
+                          ),
+                          Text(
+                            "Male",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
                 Expanded(
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xff2e293d),
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                    margin: EdgeInsets.all(10),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.female,
-                          color: Color(0xff8482ff),
-                          size: 50,
-                        ),
-                        Text(
-                          "Female",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ],
+                  child: InkWell(
+                    onTap: (){
+
+                      setState(() {
+                        ismale = false;
+                      });
+
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: ismale == false? Color(0xff534672) : Color(0xff2e293d),
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                      margin: EdgeInsets.all(10),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.female,
+                            color: Color(0xff8482ff),
+                            size: 50,
+                          ),
+                          Text(
+                            "Female",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -97,16 +119,23 @@ class _HomeState extends State<home> {
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                   Text(
-                    "175",
+                    "$height",
                     style: TextStyle(color: Colors.white, fontSize: 70),
                   ),
                   Slider(
+                    min: 100,
                     max: 200,
                     activeColor: Color(0xff8482ff),
                     inactiveColor: Colors.black,
-                    value: val,
+                    value: height,
 
-                    onChanged: (double val){},
+                    onChanged: (double value){
+                      setState(() {
+
+                        height = value.roundToDouble();
+
+                      });
+                    },
                   )
                 ],
               ),
@@ -142,7 +171,13 @@ class _HomeState extends State<home> {
                               minWidth: 8,
                               height: 50,
                               color: Color(0xff8482ff),
-                              onPressed: () {},
+                              onPressed: () {
+
+                                setState(() {
+                                  weight--;
+                                });
+
+                              },
                               child: Icon(
                                 Icons.remove,
                                 color: Colors.black,
@@ -150,7 +185,7 @@ class _HomeState extends State<home> {
                               ),
                             ),
                             Text(
-                              "66",
+                              "$weight",
                               style: TextStyle(
                                   fontSize: 50,
                                   color: Colors.white,
@@ -162,7 +197,13 @@ class _HomeState extends State<home> {
                               minWidth: 8,
                               height: 50,
                               color: Color(0xff8482ff),
-                              onPressed: () {},
+                              onPressed: () {
+
+                                setState(() {
+                                  weight++;
+                                });
+
+                              },
                               child: Icon(
                                 Icons.add,
                                 color: Colors.black,
@@ -206,7 +247,13 @@ class _HomeState extends State<home> {
                               minWidth: 8,
                               height: 50,
                               color: Color(0xff8482ff),
-                              onPressed: () {},
+                              onPressed: () {
+
+                                setState(() {
+                                  age--;
+                                });
+
+                              },
                               child: Icon(
                                 Icons.remove,
                                 color: Colors.black,
@@ -214,7 +261,7 @@ class _HomeState extends State<home> {
                               ),
                             ),
                             Text(
-                              "22",
+                              "$age",
                               style: TextStyle(
                                   fontSize: 50,
                                   color: Colors.white,
@@ -226,7 +273,13 @@ class _HomeState extends State<home> {
                               minWidth: 8,
                               height: 50,
                               color: Color(0xff8482ff),
-                              onPressed: () {},
+                              onPressed: () {
+
+                                setState(() {
+                                  age++;
+                                });
+
+                              },
                               child: Icon(
                                 Icons.add,
                                 color: Colors.black,
