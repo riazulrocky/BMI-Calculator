@@ -1,4 +1,5 @@
 import 'package:bmi_calculator/logic.dart';
+import 'package:bmi_calculator/result.dart';
 import 'package:flutter/material.dart';
 class home extends StatefulWidget {
   const home({super.key});
@@ -10,8 +11,8 @@ class home extends StatefulWidget {
 class _HomeState extends State<home> {
 
   bool ismale = true;
-  int weight = 66;
-  int age = 21;
+  int weight = 50;
+  int age = 25;
   double height = 175;
 
   @override
@@ -321,7 +322,12 @@ class _HomeState extends State<home> {
                   height: height.toInt(), weight: weight.toInt(),
                 );
 
-
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> resultpage(
+                  bmiResult: cal.calculateBMI(),
+                  resultText: cal.getResult(),
+                  info: cal.getInfo(),
+                ))
+                );
 
               },
 

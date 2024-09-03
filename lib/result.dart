@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/home.dart';
 import 'package:bmi_calculator/logic.dart';
 import 'package:flutter/material.dart';
 
@@ -76,7 +77,6 @@ class resultpage extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15),
               ),
-              onPressed: () {},
               child: Text(
                 "Re-Calculate",
                 style: TextStyle(
@@ -84,6 +84,14 @@ class resultpage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
+
+              onPressed: () {
+
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> home()));
+
+              },
+
+
               color: Color(0xff8482ff),
               minWidth: 370,
               height: 60,
