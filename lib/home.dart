@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/logic.dart';
 import 'package:flutter/material.dart';
 class home extends StatefulWidget {
   const home({super.key});
@@ -305,7 +306,7 @@ class _HomeState extends State<home> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15),
               ),
-              onPressed: () {},
+
               child: Text(
                 "Calculate",
                 style: TextStyle(
@@ -313,6 +314,17 @@ class _HomeState extends State<home> {
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
+
+              onPressed: (){
+
+                Logic cal = Logic(
+                  height: height.toInt(), weight: weight.toInt(),
+                );
+
+
+
+              },
+
               color: Color(0xff8482ff),
               minWidth: 370,
               height: 60,
